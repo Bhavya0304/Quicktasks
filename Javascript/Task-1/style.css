@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+     
+    height: 100vh;
+    background-image: url(./18.jpg);    
+    color: white !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width:320px) {
+    .tablerRow{
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .headerRows{
+        display: none;
+    }
+}

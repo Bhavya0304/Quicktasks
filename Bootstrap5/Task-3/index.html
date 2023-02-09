@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <section class="container-fluid p-0 desktop" id="viewer">
+        <div class="overlay"></div>
+        <section class="sidebar" id="sidebar">
+            <!-- <div class="overlay-side"></div> -->
+            <div class="container">
+                <div class="logo">
+                    <img src="./images/Vector.png">
+                    <span>Logo here</span>
+                </div>
+                <div class="menus">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <i class="bi bi-dash-square"></i>
+                            <span>Dashboard</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-calendar"></i>
+                            <span>Calender</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-projector"></i>
+                            <span>Projects</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-people"></i>
+                            <span>Teams</span>
+                        </li>
+                        <li class="list-group-item">
+                            <i class="bi bi-nut"></i>
+                            <span>Settings</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="inside_btn text-center">
+                    <button class="btn btn-custom" onclick="ToggleNavbar(this)">
+                        < </button>
+                </div>
+            </div>
+        </section>
+        <section class="body" id="body">
+            <nav class="navbar navbar-light bg-light bg-transparent p-0">
+                <div class="container-fluid p-0">
+                    <div class="d-flex w-100">
+                        <div class="w-75 d-flex right-nav">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success btn-custom2" type="submit">Search</button>
+                        </div>
+                        <div class="w-25 text-end px-3 left-nav">
+                            <i class="bi bi-search d-inline-block d-sm-inline-block d-md-none d-lg-none px-4"></i>
+                            <span class="px-3 fw-bold d-none d-lg-inline-block d-md-inline-block d-sm-none">Bhavya
+                                Joshi</span>
+                            <img src="./images/me.jpg" class="avatar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container-fluid p-0 mt-3">
+                <div class="row">
+                    <div class="col-lg-9 col-sm-12">
+                        <div class="container-fluid p-0 main-body">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <div class="info-cards p-3 m-2 m-sm-2 m-md-0 m-lg-0 fh-1">
+                                        <span>
+                                            <i class="bi bi-calendar float-end color"></i>
+                                        </span>
+                                        <div class="w-100">
+                                            <span class="fs-4 text-wrap f-custom-1">Monthly Working Hours</span>
+                                        </div>
+                                        <span class="fs-2">160</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="info-cards p-3 m-2 m-sm-2 m-md-0 m-lg-0 fh-1">
+                                        <span>
+                                            <i class="bi bi-clock-fill float-end color"></i>
+                                        </span> 
+                                        <div class="w-100">
+                                            <span class="fs-4 text-wrap f-custom-1">Late Days</span>
+                                        </div>
+                                        <span class="fs-2">10</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="info-cards p-3 m-2 m-sm-2 m-md-0 m-lg-0 fh-1">
+                                        <span>
+                                            <i class="bi bi-bag-fill float-end color"></i>
+                                        </span>
+                                        <div class="w-100">
+                                            <span class="fs-4 text-wrap f-custom-1">Leave Without Pay</span>
+                                        </div>
+                                        <span class="fs-2">360</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3">
+                                    <div class="info-cards p-3 m-2 m-sm-2 m-md-0 m-lg-0 fh-1">
+                                        <span>
+                                            <i class="bi bi-emoji-frown float-end color"></i>
+                                        </span>
+                                        <div class="w-100">
+                                            <span class="fs-4 text-wrap f-custom-1">Monthly Working Hours</span>
+                                        </div>
+                                        <span class="fs-2">160</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <div class="card-group flex-nowrap p-2 bg-white">
+                                        <div class="card custom-card-border my-2">
+                                            <div class="card-body">
+                                                <span class="fs-6 d-block head">Leaves Remaining</span>
+                                                <span class="fs-2 d-block sub text-primary fw-bolder">10</span>
+                                            </div>
+                                        </div>
+                                        <div class="card custom-card-border my-2">
+                                            <div class="card-body">
+                                                <span class="fs-6 d-block">Leaves Taken</span>
+                                                <span class="fs-2 d-block text-warning fw-bolder">06</span>
+                                            </div>
+                                        </div>
+                                        <div class="card border-0 my-2">
+                                            <div class="card-body">
+                                                <span class="fs-6 d-block">Leaves Pending to approve</span>
+                                                <span class="fs-2 d-block text-danger fw-bolder ">01</span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-7 col-md-12 h-100">
+                                    <h3>Employees on leave today </h3>
+                                    <div class="table-responsive">
+                                        <table class="table mt-3 custom-tb mh-3">
+                                            <thead class="custom-bg">
+                                                <tr>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Duration</th>
+                                                    <th scope="col">Leave Start</th>
+                                                    <th scope="col">Leave End</th>
+                                                    <th scope="col">Time</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="p-5">
+                                                <tr>
+                                                    <td>Bhavya</td>
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavya</td>
+
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavya</td>
+
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavya</td>
+
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavya</td>
+
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Bhavya</td>
+
+                                                    <td>2.0</td>
+                                                    <td>20/1/2025</td>
+                                                    <td>20/1/2019</td>
+                                                    <td>10:00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-center viewall">View All</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5 col-md-12 h-100 conversation">
+                                    <h3>Conversation</h3>
+                                    <div class="light mt-4 p-3 mh-3 overflow-auto">
+
+                                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                            <li class="nav-item custom-item border-0" role="presentation">
+                                                <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#home-tab-pane" type="button" role="tab"
+                                                    aria-controls="home-tab-pane" aria-selected="true">Latests
+                                                    Chats</button>
+                                            </li>
+                                            <li class="nav-item custom-item" role="presentation">
+                                                <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                                    aria-controls="profile-tab-pane" aria-selected="false">Schedeled
+                                                    Chats</button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <div class="btn-group dropend">
+                                                    <button type="button" class="btn bg-transparent" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <i class="bi bi-three-dots justify-self-end"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu drop-custom">
+                                                        <li><a class="dropdown-item" href="#">
+                                                            <i class="bi bi-pencil px-2"></i>
+                                                            Edit
+                                                        </a></li>
+                                                        <li><a class="dropdown-item" href="#">
+                                                            <i class="bi bi-bucket px-2"></i>
+                                                            Delete
+                                                        </a></li>
+                                                    
+                                                      <!-- Dropdown menu links -->
+                                                    </ul>
+                                                  </div>
+                                                  
+                                             
+                                                  
+                                              
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="myTabContent">
+                                            <div class="tab-pane fade show active h-100" id="home-tab-pane"
+                                                role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                                                <div class="card-post-2 p-3 bg-light border-bottom d-flex">
+                                                    <span class="rotate-custom">Dec 28</span>
+                                                    <img src="./images/avatar.png">
+                                                    <div class="info mx-3">
+                                                        <span class="name d-block">Subham Mehta</span>
+                                                        <span class="chat d-block"> Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.</span>
+                                                        <div class="chats-status d-flex justify-content-between">
+                                                            <span class="">
+                                                                <i class="bi bi-heart"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                            <span class="">
+                                                                <i class="bi bi-cloud"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                            <span class="">
+                                                                <i class="bi bi-bookmark"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-post-2 p-3 bg-light border-bottom d-flex">
+                                                    <span class="rotate-custom">Dec 28</span>
+                                                    <img src="./images/avatar.png">
+                                                    <div class="info mx-3">
+                                                        <span class="name d-block">Subham Mehta</span>
+                                                        <span class="chat d-block"> Lorem ipsum dolor, sit amet
+                                                            consectetur adipisicing elit.</span>
+                                                        <div class="chats-status d-flex justify-content-between">
+                                                            <span class="">
+                                                                <i class="bi bi-heart"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                            <span class="">
+                                                                <i class="bi bi-cloud"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                            <span class="">
+                                                                <i class="bi bi-bookmark"></i>
+                                                                <span>39</span>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="text-center">
+                                                    <span class="viewall">View all</span>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade d-flex justify-content-center align-items-center h-100"
+                                                id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
+                                                tabindex="0">
+                                                No chats to show...
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-lg-12">
+                                    <h3>Assigned Tasks</h3>
+                                    <div class="table-responsive">
+                                        <table class="table mt-3 custom-tb">
+                                            <thead class="custom-bg">
+                                                <tr>
+                                                    <th scope="col">Task Name</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Logged Hours</th>
+                                                    <th scope="col">Task Efficiency</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="p-5">
+                                                <tr>
+                                                    <td>BMagento-VP file-edits</td>
+                                                    <td>02 Jan 2023</td>
+                                                    <td>04:00 hrs</td>
+                                                    <td class="text-success fw-800">100%</td>
+                                                    <td>
+                                                        <i class="bi bi-three-dots-vertical"></i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BMagento-VP file-edits</td>
+                                                    <td>02 Jan 2023</td>
+                                                    <td>04:00 hrs</td>
+                                                    <td class="text-success fw-800">100%</td>
+                                                    <td>
+                                                        <i class="bi bi-three-dots-vertical"></i>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>BMagento-VP file-edits</td>
+                                                    <td>02 Jan 2023</td>
+                                                    <td>04:00 hrs</td>
+                                                    <td class="text-success fw-800">100%</td>
+                                                    <td>
+                                                        <i class="bi bi-three-dots-vertical"></i>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="5" class="text-center viewall">View All</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        <div class="inner-sidebar">
+                            <div class="custom-card birthday-block">
+                                <div class="heading d-flex align-items-center justify-content-around">
+                                    <span>Birthdays Today</span>
+                                    <i class="fa fa-birthday-cake fs-3 ms-auto"></i>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info">
+                                        <span class="name d-block">Subham Mehta</span>
+                                        <span class="position d-block">UX/UI Designer</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info">
+                                        <span class="name d-block">Joshi Bhavya</span>
+                                        <span class="position d-block">C# developer</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="custom-card work-anniversary-block">
+                                <div class="heading d-flex align-items-center justify-content-around">
+                                    <span>Work Anniversary</span>
+                                    <i class="fa fa-angellist fs-3 ms-auto"></i>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info w-100">
+                                        <span class="name d-block">Subham Mehta</span>
+                                        <span class="position d-block">UX/UI Designer</span>
+                                    </div>
+                                    <span class="float-end year">1 year</span>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info w-100">
+                                        <span class="name d-block">Subham Mehta</span>
+                                        <span class="position d-block">UX/UI Designer</span>
+                                    </div>
+                                    <span class="float-end year">1 year</span>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info w-100">
+                                        <span class="name d-block">Subham Mehta</span>
+                                        <span class="position d-block">UX/UI Designer</span>
+                                    </div>
+                                    <span class="float-end year">1 year</span>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/avatar.png">
+                                    <div class="info w-100">
+                                        <span class="name d-block">Subham Mehta</span>
+                                        <span class="position d-block">UX/UI Designer</span>
+                                    </div>
+                                    <span class="float-end year">1 year</span>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="custom-card holidays-block">
+                                <div class="heading d-flex align-items-center justify-content-around">
+                                    <span>Holidays</span>
+                                    <i class="fa fa-briefcase fs-3 ms-auto"></i>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                                <div class="card-post-1 p-3 bg-white border-bottom  d-flex align-items-center">
+                                    <img src="./images/kite.png">
+                                    <div class="info">
+                                        <span class="name d-block">Uttrayan</span>
+                                        <span class="date d-block">14 Jan 2023 | Friday</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            </div>
+
+        </section>
+    </section>
+    <script>
+        var classList = document.getElementById('viewer').classList;
+
+        var minWidth = window.matchMedia("(max-width: 1200px)");
+        console.log(classList)
+        function match() {
+            minWidth.matches ? toggle() : classList.remove('m-view');
+        }
+       
+        minWidth.addListener(match);
+        match();
+
+
+        function ToggleNavbar() {
+            var viewer = document.getElementById("viewer");
+
+
+            if (viewer.classList.contains('desktop')) {
+                viewer.classList.remove('desktop');
+                viewer.classList.add('mobile');
+              
+            }
+            else {
+                viewer.classList.remove('mobile');
+                viewer.classList.add('desktop');
+            }
+            if(viewer.classList.contains('m-view')){
+                if(document.body.style.overflowY == "hidden"){
+                    document.body.style.overflowY ="auto";
+                }
+                else{
+                    document.body.style.overflowY ="hidden";
+                }
+            }
+            else{
+                document.body.style.overflowY ="auto";
+            }
+        }
+
+        function toggle() {
+            var classList = document.getElementById('viewer').classList;
+            classList.add('mobile');
+            classList.remove('desktop');
+            classList.add('m-view');
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
