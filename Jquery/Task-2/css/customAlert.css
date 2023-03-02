@@ -1,0 +1,44 @@
+.alert-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    padding: 50px;
+    background-color: white;
+    transform: translate(-50%,-50%);
+    border-radius:15px ;
+    text-align: center;
+
+}
+.alert-body p{
+    display: block;
+    color: red;
+    font-weight: 600;
+}
+/* .alert-body button{
+    padding: 5px 30px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+
+.alert-body button:hover{
+    color: white;
+    background-color: red;
+
+} */
+
+
+.alert-body{
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0,0.3);
+    display: block;
+}
+
+.hide{
+    display: none;
+}

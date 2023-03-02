@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/EditableTable.css">
+    <link rel="stylesheet" href="./css/reportTable.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container mainBox">
+        <section class="Edit Section mt-4">
+            <div class="">
+                <button class="btn btn-outline-success" onclick="addRow(this)">Add Row</button>
+                <div class="table-responsive">
+                    <table id="EditableTable" class="table mt-3">
+                        
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section>
+            <diV class="text-center mt-4">
+                <button class="btn btn-outline-secondary" onclick="generateReport()">Generate Report</button>
+                <div id="reportTable" class="table-responsive">   
+                </diV>
+            </div>
+        </section>
+    </section>
+      <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+      <script src="./bootstrap/bootstrap.min.js"></script>
+      <script src="./js/EditableTable.js"></script>
+      <script src="./js/reportTable.js"></script>
+      <script src="./main.js"></script>
+</body>
+</html>

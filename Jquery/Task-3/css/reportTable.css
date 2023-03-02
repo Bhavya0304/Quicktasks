@@ -1,0 +1,19 @@
+.reportDiv{
+    margin: 50px 0;
+    border: 1px solid black ;
+    padding: 50px;
+}
+.reportDiv thead td{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.reportDiv .tableRow table{
+    margin-top: 20px;
+}
+
+.reportDiv .red{
+    background-color: red;
+    color: white;
+}
+
+

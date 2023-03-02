@@ -1,0 +1,59 @@
+.editableable thead td {
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.editableable input:disabled {
+    background-color: transparent;
+    border: none;
+}
+
+.editableable input {
+    text-align: center;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.editableable input:focus,
+.editableable input:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.editableable td {
+    text-align: center;
+}
+
+.editableable button {
+    margin: 5px;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-block {
+    display: block;
+}
+
+.error {
+    color: red;
+    font-weight: 600;
+}
+
+@media screen and (max-width:700px) {
+    .editableable td {
+        display: block;
+        border: none;
+
+    }
+    .editableable tr:not(thead tr) {
+        border: 1px solid black;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .editableable thead td {
+        display: none;
+    }
+}
